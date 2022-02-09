@@ -1,7 +1,7 @@
 public class BuySellStock {
 
     public static void main(String[] args) {
-        int arr[]={5,1,4,6,7,8,4,3,7,9};
+        int[] arr =new int[]{5,1,4,6,7,8,4,3,7,9,4};
 
         int profit=solutionBuySellStockOnce(arr);
 
@@ -13,8 +13,9 @@ public class BuySellStock {
         int minValue=Integer.MAX_VALUE;
 
         for (int i=0;i<arr.length;i++){
-            profit=Math.max(profit,arr[i]-minValue);
+
             minValue=Math.min(minValue,arr[i]);
+            profit=Math.max(profit,arr[i]-minValue);
         }
 
 
