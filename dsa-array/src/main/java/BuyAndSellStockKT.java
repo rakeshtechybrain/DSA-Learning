@@ -41,6 +41,7 @@ public class BuyAndSellStockKT {
     }
 
     private static int helper(int[] price) {
+
         int profit = 0;
         for (int i = 1; i < price.length; i++) {
             if (price[i] > price[i - 1]) {
