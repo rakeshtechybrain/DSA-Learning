@@ -2,11 +2,12 @@ import java.util.*;
 
 public class PrevAndNextMinMaxProblem {
     public static void main(String[] args) {
-        int[] nums = {1, 4, 5, 3, 8, 73, 1, 9};
+        int[] nums = {2,1,5,6,2,3};
         int[] pMinElement = findPreMinElement(nums);//-1,1,4,1,3,8,-1,1
         int[] pMaxElement = findPreGreaterElement1(nums);//-1,-1,-1,5,-1,-1,73,73
         int[] nMinElement = findNextMinElement(nums); //-1,3,3,1,1,1,-1,-1
         int[] ngreaterElement = findNextGreaterElement(nums); //4,5,8,8,73,-1,9,-1
+
 
     }
 
@@ -75,7 +76,7 @@ public class PrevAndNextMinMaxProblem {
         return ps;
     }
 
-    private static int[] findPreMinElement(int[] nums) {
+    public static int[] findPreMinElement(int[] nums) {
         int[] ps = new int[nums.length];
         Deque<Integer> st = new ArrayDeque<>();
 
