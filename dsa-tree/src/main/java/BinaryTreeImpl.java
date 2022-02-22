@@ -1,39 +1,80 @@
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.LinkedBlockingDeque;
 
 public class BinaryTreeImpl {
 
-    public static void main(String[] args) {
-        //Create Binary TreeNode and Traverse the Child
-        TreeNode root = new TreeNode();
-        List<String> treeData = Arrays.asList("1", "2", "3", "4", "5", "6");
-        for (String data : treeData) {
-            root = insertInBinaryTree(root, data);
+
+    public static void levelOrder(TreeNode root) throws Exception {
+        if (root == null) throw new Exception("Tree must be exist");
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            System.out.println(node.getData());
+            if (node.getLeftChild() != null) {
+                queue.add(node.getLeftChild());
+            }
+            if (node.getRightChild() != null) {
+                queue.add(node.getRightChild());
+            }
         }
 
-        // /* Function to count number of nodes */
-        int nodeCount=countNodes(root);
-        /* Function to search for an element */
-        boolean isFound= searchElement(root,"11");
-        /* Function for inorder traversal */
-        preOrderRec(root);
-        pOrderRec(root);
-        inOrderRec(root);
 
     }
 
-    private static void pOrderRec(TreeNode root) {
+    public static void spiralOrder(TreeNode root) {
 
-        if(root!=null){
+
+        Stack<TreeNode> st1 = new Stack<>();
+        Stack<TreeNode> st2 = new Stack<>();
+        st1.push(root);
+
+        while (!st1.isEmpty() || !st2.isEmpty()) {
+
+            if (!st1.isEmpty()) {
+                //pop from st1 ,print and push t st2, Left to right
+                while (!st1.isEmpty()) {
+                    TreeNode node = st1.pop();
+                    System.out.println(node.getData());
+                    if (node.getLeftChild() != null) st2.push(node.getLeftChild());
+                    if (node.getRightChild() != null) st2.push(node.getRightChild());
+
+                }
+
+            }
+
+            if (!st2.isEmpty()) {
+                //pop from st1 ,print and push t st2, Left to right
+                while (!st2.isEmpty()) {
+                    TreeNode node = st2.pop();
+                    System.out.println(node.getData());
+
+                    if (node.getRightChild() != null) st1.push(node.getRightChild());
+                    if (node.getLeftChild() != null) st1.push(node.getLeftChild());
+
+                }
+
+            }
+
+
+        }
+
+
+    }
+
+    public static void pOrderRec(TreeNode root) {
+
+        if (root != null) {
             preOrderRec(root.getLeftChild());
             preOrderRec(root.getRightChild());
             System.out.println(root.getData());
         }
     }
 
-    private static void inOrderRec(TreeNode root) {
+    public static void inOrderRec(TreeNode root) {
 
-        if(root!=null){
+        if (root != null) {
             preOrderRec(root.getLeftChild());
             System.out.println(root.getData());
             preOrderRec(root.getRightChild());
@@ -42,8 +83,8 @@ public class BinaryTreeImpl {
         }
     }
 
-    private static void preOrderRec(TreeNode root) {
-        if(root!=null){
+    public static void preOrderRec(TreeNode root) {
+        if (root != null) {
             System.out.println(root.getData());
             preOrderRec(root.getLeftChild());
             preOrderRec(root.getRightChild());
@@ -53,7 +94,7 @@ public class BinaryTreeImpl {
 
     }
 
-    private static boolean searchElement(TreeNode root, String c) {
+    public static boolean searchElement(TreeNode root, Integer c) {
         boolean isFound = false;
 
         if (root.getData() == c) return true;
@@ -69,7 +110,7 @@ public class BinaryTreeImpl {
         return isFound;
     }
 
-    private static int countNodes(TreeNode root) {
+    public static int countNodes(TreeNode root) {
 
         if (root == null) return 0;
         int count = 0;
@@ -96,4 +137,13 @@ public class BinaryTreeImpl {
     }
 
 
+    public static int height(TreeNode root) {
+
+        if (root == null) return 0;
+
+        int rh = height(root.getRightChild());
+        int lh = height(root.getLeftChild());
+
+        return Math.max(rh, lh) + 1;
+    }
 }
