@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class BinaryTreeClientClass {
 
     public static void main(String[] args) throws Exception {
@@ -8,14 +10,29 @@ public class BinaryTreeClientClass {
         btc.constructBinaryTree(root);
 
        //BinaryTreeImpl.levelOrder(root);
-       // BinaryTreeImpl.preOrderRec(root);
-        //BinaryTreeImpl.inOrderRec(root);
-        //BinaryTreeImpl.pOrderRec(root);
+       // BinaryTreeImpl.preOrderRec(root); /O(n)
+        //BinaryTreeImpl.inOrderRec(root);/O(n)
+        //BinaryTreeImpl.pOrderRec(root);/O(n)
         //BinaryTreeImpl.spiralOrder(root);
        // BinaryTreeImpl.searchElement(root,3);
        // BinaryTreeImpl.countNodes(root);
         //BinaryTreeImpl.height(root);
-        System.out.println(BinaryTreeImpl.height(root));
+        //System.out.println(BinaryTreeImpl.height(root));
+
+        //List<Object> data= BinaryTreeImpl.preOrderIterative(root);
+        //List<Object> data= BinaryTreeImpl.inOrderIterative(root);
+        //List<Object> data= BinaryTreeImpl.postOrderIterative(root); //usingn 2Stack
+       // List<Object> data= BinaryTreeImpl.postOrderIterativeusingOneStack(root); //using 1Stack
+       // int maxElement=BinaryTreeImpl.findMaxElement(root);
+        //int sizeOfBinaryTree=BinaryTreeImpl.calSizeOfbinaryTree(root);
+        //System.out.print("sizeOfBinaryTree "+sizeOfBinaryTree);
+        TreeNode<Integer> node=BinaryTreeImpl.lca(root,new TreeNode<>(6),new TreeNode<>(54));
+
+        System.out.print("LCA  "+node.getData());
+
+
+       // BinaryTreeImpl.postOrderIterative();
+        //BinaryTreeImpl.inOrderIterative();
     }
 
 

@@ -146,4 +146,154 @@ public class BinaryTreeImpl {
 
         return Math.max(rh, lh) + 1;
     }
+
+    public static List<Object> preOrderIterative(TreeNode root) throws Exception {
+        if (root == null) throw new Exception("root must be exist");
+        Stack<TreeNode> st = new Stack<>();
+        st.push(root);
+        List<Object> orderdNodeList = new ArrayList<>();
+
+        while (!st.isEmpty()) {
+            TreeNode node = st.pop();
+
+            orderdNodeList.add(node.getData());
+            if (node.getRightChild() != null) st.push(node.getRightChild());
+            if (node.getLeftChild() != null) st.push(node.getLeftChild());
+
+        }
+        return orderdNodeList;
+    }
+
+
+    public static List<Object> inOrderIterative(TreeNode root) throws Exception {
+
+        if (root == null) throw new Exception("root must be exist");
+        List<Object> orderdNodeList = new ArrayList<>();
+        Stack<TreeNode> st = new Stack<>();
+        while (true) {
+
+            if (root != null) {
+                st.push(root);
+                root = root.getLeftChild();
+            } else {
+                if (st.isEmpty()) break;
+                root = st.pop();
+                orderdNodeList.add(root.getData());
+                root = root.getRightChild();
+            }
+
+        }
+
+
+        return orderdNodeList;
+
+    }
+
+    public static List<Object> postOrderIterative(TreeNode root) {
+        Stack<TreeNode> st1 = new Stack();
+        Stack<TreeNode> st2 = new Stack();
+        List<Object> orderdNodeList = new ArrayList<>();
+        st1.push(root);
+        TreeNode curr = null;
+
+        while (!st1.isEmpty()) {
+            curr = st1.pop();
+            st2.push(curr);
+            if (curr.getLeftChild() != null) st1.push(curr.getLeftChild());
+            if (curr.getRightChild() != null) st1.push(curr.getRightChild());
+
+        }
+        while (!st2.isEmpty()) {
+            curr = st2.pop();
+            // System.out.println(curr);
+            orderdNodeList.add(curr.getData());
+        }
+
+
+        return orderdNodeList;
+
+    }
+
+    public static List<Object> postOrderIterativeusingOneStack(TreeNode root) {
+        List<Object> orderdNodeList = new ArrayList<>();
+
+        Stack<TreeNode> st = new Stack<>();
+        TreeNode curr = root;
+        TreeNode pre = null;
+
+        while (curr != null || !st.isEmpty()) {
+            if (curr != null) {
+                st.push(curr);
+                curr = curr.getLeftChild();
+            } else {
+                curr = st.peek();
+
+                if (curr.getRightChild() == null || curr.getRightChild() == pre) {
+                    orderdNodeList.add(curr.getData());
+                    st.pop();
+                    pre = curr;
+                    curr = null;
+
+                } else {
+                    curr = curr.getRightChild();
+                }
+
+            }
+
+
+        }
+
+
+        return orderdNodeList;
+    }
+
+    public static int findMaxElement(TreeNode root) {
+
+        int max = Integer.MIN_VALUE;
+
+        if (root != null) {
+            int value = (int) root.getData();
+            int lMax = findMaxElement(root.getLeftChild());
+            int rMax = findMaxElement(root.getRightChild());
+            max = Math.max(lMax, rMax);
+            max = Math.max(max, value);
+
+        }
+
+        return max;
+
+    }
+
+    public static int calSizeOfbinaryTree(TreeNode root) {
+        if(root==null) return 0;
+
+        return calSizeOfbinaryTree(root.getLeftChild())+calSizeOfbinaryTree(root.getRightChild())+1;
+    }
+
+    public static TreeNode<Integer> lca(TreeNode root, TreeNode<Integer> a,
+                           TreeNode<Integer> b) {
+
+        if(root == null){
+            return null;
+        }
+        if(root == a || root == b){
+            return root;
+        }
+        TreeNode left = lca(root.getLeftChild(), a, b);
+        TreeNode right = lca(root.getRightChild(), a, b);
+
+        if(left == null && right == null){
+            return null;
+        }
+        if(left!=null && right != null){
+            return root;
+        }
+        if(left == null){
+            return right;
+        }
+        else{
+            return left;
+        }
+
+    }
 }
