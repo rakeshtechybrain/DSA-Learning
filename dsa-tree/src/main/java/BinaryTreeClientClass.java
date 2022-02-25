@@ -26,9 +26,27 @@ public class BinaryTreeClientClass {
        // int maxElement=BinaryTreeImpl.findMaxElement(root);
         //int sizeOfBinaryTree=BinaryTreeImpl.calSizeOfbinaryTree(root);
         //System.out.print("sizeOfBinaryTree "+sizeOfBinaryTree);
-        TreeNode<Integer> node=BinaryTreeImpl.lca(root,new TreeNode<>(6),new TreeNode<>(54));
+        //TreeNode<Integer> node=BinaryTreeImpl.lca(root,new TreeNode<>(6),new TreeNode<>(54));
 
-        System.out.print("LCA  "+node.getData());
+        //System.out.print("LCA  "+node.getData());
+
+
+        List path=BinaryTreeImpl.pathRootToLeaf(root);
+        int pathSum=81;
+
+        for(Object x:path){
+             int s=0;
+            String [] sum=x.toString().split("->");
+
+            for(String j:sum){
+               s+= Integer.parseInt(j);
+            }
+            if(s==pathSum) {
+                System.out.print(" " + x);
+                System.out.println("  = " + s);
+            }
+
+        }
 
 
        // BinaryTreeImpl.postOrderIterative();

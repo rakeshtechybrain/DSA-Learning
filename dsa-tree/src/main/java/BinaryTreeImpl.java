@@ -4,6 +4,8 @@ import java.util.concurrent.LinkedBlockingDeque;
 
 public class BinaryTreeImpl {
 
+    static List res;
+
 
     public static void levelOrder(TreeNode root) throws Exception {
         if (root == null) throw new Exception("Tree must be exist");
@@ -265,35 +267,59 @@ public class BinaryTreeImpl {
     }
 
     public static int calSizeOfbinaryTree(TreeNode root) {
-        if(root==null) return 0;
+        if (root == null) return 0;
 
-        return calSizeOfbinaryTree(root.getLeftChild())+calSizeOfbinaryTree(root.getRightChild())+1;
+        return calSizeOfbinaryTree(root.getLeftChild()) + calSizeOfbinaryTree(root.getRightChild()) + 1;
     }
 
     public static TreeNode<Integer> lca(TreeNode root, TreeNode<Integer> a,
-                           TreeNode<Integer> b) {
+                                        TreeNode<Integer> b) {
 
-        if(root == null){
+        if (root == null) {
             return null;
         }
-        if(root == a || root == b){
+        if (root == a || root == b) {
             return root;
         }
         TreeNode left = lca(root.getLeftChild(), a, b);
         TreeNode right = lca(root.getRightChild(), a, b);
 
-        if(left == null && right == null){
+        if (left == null && right == null) {
             return null;
         }
-        if(left!=null && right != null){
+        if (left != null && right != null) {
             return root;
         }
-        if(left == null){
+        if (left == null) {
             return right;
-        }
-        else{
+        } else {
             return left;
         }
 
     }
+
+    public static List pathRootToLeaf(TreeNode root) {
+
+        res = new ArrayList<>();
+        printPathForomRootToLeaf(root, "");
+
+
+        return res;
+    }
+
+    private static void printPathForomRootToLeaf(TreeNode root, String path) {
+        if (root == null)
+            return;
+        path = path + String.valueOf(root.getData());
+        if (root.getLeftChild() == null && root.getRightChild() == null) {
+            res.add(path);
+
+        }
+        else {
+            path = path + "->";
+            printPathForomRootToLeaf(root.getLeftChild(), path);
+            printPathForomRootToLeaf(root.getRightChild(), path);
+        }
+    }
+
 }
