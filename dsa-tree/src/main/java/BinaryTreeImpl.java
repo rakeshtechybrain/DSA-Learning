@@ -1,6 +1,4 @@
 import java.util.*;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.LinkedBlockingDeque;
 
 public class BinaryTreeImpl {
 
@@ -310,16 +308,118 @@ public class BinaryTreeImpl {
     private static void printPathForomRootToLeaf(TreeNode root, String path) {
         if (root == null)
             return;
-        path = path + String.valueOf(root.getData());
+        path = path + root.getData();
         if (root.getLeftChild() == null && root.getRightChild() == null) {
             res.add(path);
 
-        }
-        else {
+        } else {
             path = path + "->";
             printPathForomRootToLeaf(root.getLeftChild(), path);
             printPathForomRootToLeaf(root.getRightChild(), path);
         }
     }
 
+    public static int diameter(TreeNode root) {
+        //base condition
+        if (root == null) return 0;
+
+        int ld = diameter(root.getLeftChild());
+
+        int rd = diameter(root.getRightChild());
+
+        int lh = height(root.getLeftChild());
+
+        int rh = height(root.getRightChild());
+
+        return Math.max(Math.max(ld, rd), lh + rh + 1);
+
+    }
+
+    public static void rightSideView(TreeNode root) throws Exception {
+
+        if (root == null) {
+            throw new Exception("root not be null");
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        queue.add(null);
+        List<Object> element = new ArrayList<>();
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            if (node == null) {
+                //print the first element of list
+                System.out.println(element.get(element.size() - 1));
+                element = new ArrayList<>();
+                if (!queue.isEmpty()) {
+                    queue.add(null);
+                }
+            } else {
+                element.add(node.getData());
+                if (node.getLeftChild() != null) queue.add(node.getLeftChild());
+                if (node.getRightChild() != null) queue.add(node.getRightChild());
+            }
+        }
+
+    }
+
+    public static List<Object> topView(TreeNode root) {
+
+        Queue<Pair> queue=new ArrayDeque<>();
+        Map<Integer,Object> map=new TreeMap<>();
+        queue.add(new Pair(root,0));
+
+        while(!queue.isEmpty()){
+            Pair node=queue.poll();
+            //if condition for top view only
+            if(!map.containsKey(node.getHd())){
+                map.put(node.getHd(),node.getNode().getData());
+            }
+            //otherwiae put all va;ue for bottom up
+            //map.put(node.getHd(),node.getNode().getData());
+            if(node.getNode().getLeftChild()!=null){
+                queue.add(new Pair(node.getNode().getLeftChild(),node.getHd()-1));
+            }
+            if(node.getNode().getRightChild()!=null){
+                queue.add(new Pair(node.getNode().getRightChild(),node.getHd()+1));
+            }
+
+        }
+
+        List<Object> ans=new ArrayList(map.size());
+
+       for(Map.Entry<Integer,Object> data :map.entrySet()){
+           ans.add(data.getValue());
+
+       }
+
+    return ans;
+
+
+    }
+}
+
+class Pair {
+    TreeNode node;
+    int hd;
+
+    public Pair(TreeNode node, int hd) {
+        this.node = node;
+        this.hd = hd;
+    }
+
+    public TreeNode getNode() {
+        return node;
+    }
+
+    public void setNode(TreeNode node) {
+        this.node = node;
+    }
+
+    public int getHd() {
+        return hd;
+    }
+
+    public void setHd(int hd) {
+        this.hd = hd;
+    }
 }

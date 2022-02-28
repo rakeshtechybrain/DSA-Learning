@@ -30,8 +30,8 @@ public class BinaryTreeClientClass {
 
         //System.out.print("LCA  "+node.getData());
 
+        /*List path=BinaryTreeImpl.pathRootToLeaf(root);
 
-        List path=BinaryTreeImpl.pathRootToLeaf(root);
         int pathSum=81;
 
         for(Object x:path){
@@ -46,11 +46,20 @@ public class BinaryTreeClientClass {
                 System.out.println("  = " + s);
             }
 
-        }
+        }*/
+
+      // BinaryTreeImpl.postOrderIterative(root);
+        //BinaryTreeImpl.inOrderIterative(root);
+    //System.out.println(BinaryTreeImpl.diameter(root));
+  //  BinaryTreeImpl.rightSideView(root);
+    List<Object> listofNodesData= BinaryTreeImpl.topView(root);
+
+    for (Object data:listofNodesData){
+        System.out.println(data);
+    }
 
 
-       // BinaryTreeImpl.postOrderIterative();
-        //BinaryTreeImpl.inOrderIterative();
+
     }
 
 
