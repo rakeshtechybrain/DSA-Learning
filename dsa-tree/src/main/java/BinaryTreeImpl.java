@@ -396,30 +396,148 @@ public class BinaryTreeImpl {
 
 
     }
+
+
+    public static int burnBinaryTree(TreeNode root, int target) {
+
+        Depth depth =new Depth(-1);
+        return burnTree(root,target, depth);
+
+
+
+    }
+
+    private static int burnTree(TreeNode root, int target, Depth depth) {
+            int ans=-1;
+
+        if(root==null) return 0;
+        if(root.getData().equals(target)) {
+            depth.setD(1);
+            return 1;
+        }
+        Depth ld= new Depth(-1);
+
+        Depth rd= new Depth(-1);
+
+        int lh= burnTree(root.getLeftChild(),target, depth);
+
+        int rh= burnTree(root.getRightChild(),target, depth);
+
+        if(ld.getD()!=-1){
+            ans=Math.max(ans,ld.getD()+1+rh);
+            ld.setD(ld.getD()+1);
+        }
+        if(rd.getD()!=-1){
+            ans=Math.max(ans,rd.getD()+1+lh);
+            rd.setD(rd.getD()+1);
+        }
+
+        return Math.max(lh,rh)+1;
+
+    }
+
+    public static int burnBinaryTreeusingHashMap(TreeNode root, int target) {
+        int ans=0;
+        if(root==null) return 0;
+        if(root.getData().equals(target)) return 1;
+
+        //fill up the hashmap of node and their parents
+        Map<TreeNode,TreeNode> parentChildRelMap=new HashMap<>();
+        Queue<TreeNode> queue=new ArrayDeque<>();
+        ArrayList<Object>  nodes=new ArrayList<>();
+        queue.add(root);
+        parentChildRelMap.put(root,null);
+
+        while(!queue.isEmpty()){
+
+            TreeNode node=queue.poll();
+            nodes.add(node);
+
+            if(node.getLeftChild()!=null){
+
+                parentChildRelMap.put(node.getLeftChild(),node);
+                queue.add(node.getLeftChild());
+            }
+            if(node.getRightChild()!=null){
+                parentChildRelMap.put(node.getRightChild(),node);
+                queue.add(node.getRightChild());
+
+            }
+
+        }
+
+        TreeNode parent=null;
+        for(Map.Entry<TreeNode,TreeNode> e:parentChildRelMap.entrySet()){
+
+            if(e.getKey().getData().equals(target)){
+                //start burn from here
+                ans++;
+                nodes.remove(e.getKey().getData());
+                parent=e.getValue();
+                break;
+
+
+
+            }
+
+        }
+
+        while(nodes.size()>0){
+            ans++;
+
+            TreeNode rchield=parent.getRightChild();
+            TreeNode lChield=parent.getLeftChild();
+            parent=parentChildRelMap.getOrDefault(parent,null);
+
+
+            ans++;
+            nodes.remove(parent.getData());
+            nodes.remove(rchield.getData());
+            nodes.remove(lChield.getData());
+
+
+        }
+
+        return ans;
+    }
+
+    public static boolean isBst(TreeNode root) {
+
+
+
+
+        return checkForBst(root,Integer.MIN_VALUE,Integer.MAX_VALUE);
+
+    }
+
+    private static boolean checkForBst(TreeNode root, int min, int max) {
+
+        if(root==null) return true;
+
+        if((int)root.getData()<min ||(int)root.getData()>max){
+            return false;
+
+        }
+        return (checkForBst(root.getLeftChild(),min,(int)root.getData()-1)&&
+                checkForBst(root.getRightChild(),(int)root.getData()+1,max));
+    }
+    static TreeNode  pre=null;
+
+    public static boolean isBst2(TreeNode root) {
+
+        if(root!=null){
+
+            if(!isBst(root.getLeftChild()))
+                return false;
+
+            if(pre!=null && (int)pre.getData()>=(int)root.getData())
+                return false;
+            pre=root;
+            return isBst(root.getRightChild());
+        }
+        else return true;
+
+    }
 }
 
-class Pair {
-    TreeNode node;
-    int hd;
 
-    public Pair(TreeNode node, int hd) {
-        this.node = node;
-        this.hd = hd;
-    }
-
-    public TreeNode getNode() {
-        return node;
-    }
-
-    public void setNode(TreeNode node) {
-        this.node = node;
-    }
-
-    public int getHd() {
-        return hd;
-    }
-
-    public void setHd(int hd) {
-        this.hd = hd;
-    }
-}

@@ -7,8 +7,7 @@ public class BinaryTreeClientClass {
         //Create Binary Tree
         BinaryTreeCloneImpl btc = new BinaryTreeCloneImpl();
         TreeNode root = new TreeNode();
-        btc.constructBinaryTree(root);
-
+       // btc.constructBinaryTree(root);
        //BinaryTreeImpl.levelOrder(root);
        // BinaryTreeImpl.preOrderRec(root); /O(n)
         //BinaryTreeImpl.inOrderRec(root);/O(n)
@@ -52,11 +51,22 @@ public class BinaryTreeClientClass {
         //BinaryTreeImpl.inOrderIterative(root);
     //System.out.println(BinaryTreeImpl.diameter(root));
   //  BinaryTreeImpl.rightSideView(root);
-    List<Object> listofNodesData= BinaryTreeImpl.topView(root);
+   /* List<Object> listofNodesData= BinaryTreeImpl.topView(root);
 
     for (Object data:listofNodesData){
         System.out.println(data);
-    }
+    }*/
+
+      //  int ans=BinaryTreeImpl.burnBinaryTree(root,5);
+
+       // System.out.println("data "+ans);
+
+        //int ans1=BinaryTreeImpl.burnBinaryTreeusingHashMap(root,5);
+      //  btc.constructBinarySearchTree(root);
+
+       // System.out.println(BinaryTreeImpl.isBst(root));
+
+        System.out.println(BinaryTreeImpl.isBst2(root)); //using inOrder Traverse
 
 
 
