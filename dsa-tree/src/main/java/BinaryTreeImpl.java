@@ -3,7 +3,7 @@ import java.util.*;
 public class BinaryTreeImpl {
 
     static List res;
-
+    static TreeNode pre = null;
 
     public static void levelOrder(TreeNode root) throws Exception {
         if (root == null) throw new Exception("Tree must be exist");
@@ -136,7 +136,6 @@ public class BinaryTreeImpl {
         return root;
     }
 
-
     public static int height(TreeNode root) {
 
         if (root == null) return 0;
@@ -163,7 +162,6 @@ public class BinaryTreeImpl {
         }
         return orderdNodeList;
     }
-
 
     public static List<Object> inOrderIterative(TreeNode root) throws Exception {
 
@@ -364,130 +362,127 @@ public class BinaryTreeImpl {
 
     public static List<Object> topView(TreeNode root) {
 
-        Queue<Pair> queue=new ArrayDeque<>();
-        Map<Integer,Object> map=new TreeMap<>();
-        queue.add(new Pair(root,0));
+        Queue<Pair> queue = new ArrayDeque<>();
+        Map<Integer, Object> map = new TreeMap<>();
+        queue.add(new Pair(root, 0));
 
-        while(!queue.isEmpty()){
-            Pair node=queue.poll();
+        while (!queue.isEmpty()) {
+            Pair node = queue.poll();
             //if condition for top view only
-            if(!map.containsKey(node.getHd())){
-                map.put(node.getHd(),node.getNode().getData());
+            if (!map.containsKey(node.getHd())) {
+                map.put(node.getHd(), node.getNode().getData());
             }
             //otherwiae put all va;ue for bottom up
             //map.put(node.getHd(),node.getNode().getData());
-            if(node.getNode().getLeftChild()!=null){
-                queue.add(new Pair(node.getNode().getLeftChild(),node.getHd()-1));
+            if (node.getNode().getLeftChild() != null) {
+                queue.add(new Pair(node.getNode().getLeftChild(), node.getHd() - 1));
             }
-            if(node.getNode().getRightChild()!=null){
-                queue.add(new Pair(node.getNode().getRightChild(),node.getHd()+1));
+            if (node.getNode().getRightChild() != null) {
+                queue.add(new Pair(node.getNode().getRightChild(), node.getHd() + 1));
             }
 
         }
 
-        List<Object> ans=new ArrayList(map.size());
+        List<Object> ans = new ArrayList(map.size());
 
-       for(Map.Entry<Integer,Object> data :map.entrySet()){
-           ans.add(data.getValue());
+        for (Map.Entry<Integer, Object> data : map.entrySet()) {
+            ans.add(data.getValue());
 
-       }
+        }
 
-    return ans;
+        return ans;
 
 
     }
 
-
     public static int burnBinaryTree(TreeNode root, int target) {
 
-        Depth depth =new Depth(-1);
-        return burnTree(root,target, depth);
-
+        Depth depth = new Depth(-1);
+        return burnTree(root, target, depth);
 
 
     }
 
     private static int burnTree(TreeNode root, int target, Depth depth) {
-            int ans=-1;
+        int ans = -1;
 
-        if(root==null) return 0;
-        if(root.getData().equals(target)) {
+        if (root == null) return 0;
+        if (root.getData().equals(target)) {
             depth.setD(1);
             return 1;
         }
-        Depth ld= new Depth(-1);
+        Depth ld = new Depth(-1);
 
-        Depth rd= new Depth(-1);
+        Depth rd = new Depth(-1);
 
-        int lh= burnTree(root.getLeftChild(),target, depth);
+        int lh = burnTree(root.getLeftChild(), target, depth);
 
-        int rh= burnTree(root.getRightChild(),target, depth);
+        int rh = burnTree(root.getRightChild(), target, depth);
 
-        if(ld.getD()!=-1){
-            ans=Math.max(ans,ld.getD()+1+rh);
-            ld.setD(ld.getD()+1);
+        if (ld.getD() != -1) {
+            ans = Math.max(ans, ld.getD() + 1 + rh);
+            ld.setD(ld.getD() + 1);
         }
-        if(rd.getD()!=-1){
-            ans=Math.max(ans,rd.getD()+1+lh);
-            rd.setD(rd.getD()+1);
+        if (rd.getD() != -1) {
+            ans = Math.max(ans, rd.getD() + 1 + lh);
+            rd.setD(rd.getD() + 1);
         }
 
-        return Math.max(lh,rh)+1;
+        return Math.max(lh, rh) + 1;
 
     }
 
     public static int burnBinaryTreeusingHashMap(TreeNode root, int target) {
-        int ans=0;
-        if(root==null) return 0;
-        if(root.getData().equals(target)) return 1;
+        int ans = 0;
+        if (root == null) return 0;
+        if (root.getData().equals(target)) return 1;
 
         //fill up the hashmap of node and their parents
-        Map<TreeNode,TreeNode> parentChildRelMap=new HashMap<>();
-        Queue<TreeNode> queue=new ArrayDeque<>();
-        ArrayList<Object>  nodes=new ArrayList<>();
+        Map<TreeNode, TreeNode> parentChildRelMap = new HashMap<>();
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        ArrayList<Object> nodes = new ArrayList<>();
         queue.add(root);
-        parentChildRelMap.put(root,null);
+        parentChildRelMap.put(root, null);
 
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
 
-            TreeNode node=queue.poll();
+            TreeNode node = queue.poll();
             nodes.add(node);
 
-            if(node.getLeftChild()!=null){
+            if (node.getLeftChild() != null) {
 
-                parentChildRelMap.put(node.getLeftChild(),node);
+                parentChildRelMap.put(node.getLeftChild(), node);
                 queue.add(node.getLeftChild());
             }
-            if(node.getRightChild()!=null){
-                parentChildRelMap.put(node.getRightChild(),node);
+            if (node.getRightChild() != null) {
+                parentChildRelMap.put(node.getRightChild(), node);
                 queue.add(node.getRightChild());
 
             }
 
         }
 
-        TreeNode parent=null;
-        for(Map.Entry<TreeNode,TreeNode> e:parentChildRelMap.entrySet()){
+        TreeNode parent = null;
+        for (Map.Entry<TreeNode, TreeNode> e : parentChildRelMap.entrySet()) {
 
-            if(e.getKey().getData().equals(target)){
+            if (e.getKey().getData().equals(target)) {
                 //start burn from here
                 ans++;
                 nodes.remove(e.getKey().getData());
-                parent=e.getValue();
+                parent = e.getValue();
                 break;
-
 
 
             }
 
         }
 
-        while(nodes.size()>0){
+        while (nodes.size() > 0) {
             ans++;
 
-            TreeNode rchield=parent.getRightChild();
-            TreeNode lChield=parent.getLeftChild();
-            parent=parentChildRelMap.getOrDefault(parent,null);
+            TreeNode rchield = parent.getRightChild();
+            TreeNode lChield = parent.getLeftChild();
+            parent = parentChildRelMap.getOrDefault(parent, null);
 
 
             ans++;
@@ -503,39 +498,75 @@ public class BinaryTreeImpl {
 
     public static boolean isBst(TreeNode root) {
 
-
-
-
-        return checkForBst(root,Integer.MIN_VALUE,Integer.MAX_VALUE);
+        return checkForBst(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
 
     }
 
     private static boolean checkForBst(TreeNode root, int min, int max) {
 
-        if(root==null) return true;
+        if (root == null) return true;
 
-        if((int)root.getData()<min ||(int)root.getData()>max){
+        if ((int) root.getData() < min || (int) root.getData() > max) {
             return false;
 
         }
-        return (checkForBst(root.getLeftChild(),min,(int)root.getData()-1)&&
-                checkForBst(root.getRightChild(),(int)root.getData()+1,max));
+        return (checkForBst(root.getLeftChild(), min, (int) root.getData() - 1) &&
+                checkForBst(root.getRightChild(), (int) root.getData() + 1, max));
     }
-    static TreeNode  pre=null;
 
     public static boolean isBst2(TreeNode root) {
 
-        if(root!=null){
+        if (root != null) {
 
-            if(!isBst(root.getLeftChild()))
+            if (!isBst(root.getLeftChild()))
                 return false;
 
-            if(pre!=null && (int)pre.getData()>=(int)root.getData())
+            if (pre != null && (int) pre.getData() >= (int) root.getData())
                 return false;
-            pre=root;
+            pre = root;
             return isBst(root.getRightChild());
+        } else return true;
+
+    }
+
+    public static BSTPair largestBst(TreeNode root) {
+
+        if (root == null) {
+
+            BSTPair bp = new BSTPair();
+            bp.setBst(true);
+            bp.setMin(Integer.MAX_VALUE);
+            bp.setMax(Integer.MIN_VALUE);
+            bp.setSize(0);
+            return bp;
         }
-        else return true;
+
+        BSTPair lp = largestBst(root.getLeftChild());
+        BSTPair rp = largestBst(root.getRightChild());
+
+        BSTPair bp = new BSTPair();
+        bp.setBst(lp.isBst()
+                && rp.isBst()
+                && (int) root.getData() >= lp.getMax()
+                && (int) root.getData() <= rp.getMin());
+        ;
+
+        bp.setMin(Math.min((int) root.getData(), Math.min(lp.getMin(), rp.getMin())));
+        bp.setMax(Math.max((int) root.getData(), Math.max(lp.getMax(), rp.getMax())));
+
+        if (bp.isBst()) {
+            bp.setRoot(root);
+            bp.setSize(lp.getSize() + rp.getSize() + 1);
+
+        } else if (lp.getSize() > rp.getSize()) {
+            bp.setRoot(lp.getRoot());
+            bp.setSize(lp.getSize());
+        } else {
+            bp.setRoot(rp.getRoot());
+            bp.setSize(rp.getSize());
+        }
+
+        return bp;
 
     }
 }

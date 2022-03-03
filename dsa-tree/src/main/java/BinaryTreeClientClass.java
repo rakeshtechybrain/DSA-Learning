@@ -62,11 +62,12 @@ public class BinaryTreeClientClass {
        // System.out.println("data "+ans);
 
         //int ans1=BinaryTreeImpl.burnBinaryTreeusingHashMap(root,5);
-      //  btc.constructBinarySearchTree(root);
+        btc.constructBinarySearchTree(root);
 
-       // System.out.println(BinaryTreeImpl.isBst(root));
+      // System.out.println(BinaryTreeImpl.isBst(root));
+// System.out.println(BinaryTreeImpl.isBst2(root)); //using inOrder Traverse
 
-        System.out.println(BinaryTreeImpl.isBst2(root)); //using inOrder Traverse
+        System.out.println(BinaryTreeImpl.largestBst(root).getSize());
 
 
 
