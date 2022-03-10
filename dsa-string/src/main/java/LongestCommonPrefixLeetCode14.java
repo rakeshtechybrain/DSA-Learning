@@ -3,7 +3,7 @@ public class LongestCommonPrefixLeetCode14 {
 
     public static void main(String[] args) {
 
-        String[] str = {"fleower","fleower","fleight"};
+        String[] str = {"geeksforgeeks","geeks","geek","geezer"};
         System.out.println(longestCommonPrefix(str));
     }
 

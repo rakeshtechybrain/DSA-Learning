@@ -569,6 +569,34 @@ public class BinaryTreeImpl {
         return bp;
 
     }
+
+    static TreeNode prev;
+    static TreeNode head;
+    public static TreeNode convertBinartyToDLL(TreeNode root) {
+
+        //Base Case
+        if(root==null) return null;
+        //As Follow InOrder Traverse
+        //Go to Left
+        convertBinartyToDLL(root.getLeftChild());
+
+        if(prev==null)
+            head=root;
+        else{
+            root.setLeftChild(prev);
+            prev.setRightChild(root);
+        }
+        prev=root;
+
+
+
+        convertBinartyToDLL(root.getRightChild());
+
+
+
+
+    return head;
+    }
 }
 
 
