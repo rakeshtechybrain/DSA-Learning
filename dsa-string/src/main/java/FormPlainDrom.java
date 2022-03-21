@@ -4,13 +4,14 @@ public class FormPlainDrom {
         String s1="geeks";
         String s2="skeeg";// rverse on s1;
 
-        System.out.println(s1.length()-requiredCOuntFormlainDron(s1,s2,s1.length()));
+        System.out.println(s1.length()- requiredCountFormPlaindrom(s1,s2,s1.length()));
 
 
 
     }
 
-    private static  int  requiredCOuntFormlainDron(String s1, String s2, int length) {
+
+    private static  int requiredCountFormPlaindrom(String s1, String s2, int length) {
         int [][] DP=new int[length+1][length+1];
 
         for(int i=0;i<=length;i++){
