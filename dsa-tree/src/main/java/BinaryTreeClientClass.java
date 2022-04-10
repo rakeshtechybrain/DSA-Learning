@@ -64,10 +64,10 @@ public class BinaryTreeClientClass {
         //int ans1=BinaryTreeImpl.burnBinaryTreeusingHashMap(root,5);
         //btc.constructBinarySearchTree(root);
 
-      // System.out.println(BinaryTreeImpl.isBst(root));
-// System.out.println(BinaryTreeImpl.isBst2(root)); //using inOrder Traverse
+      System.out.println(BinaryTreeImpl.isBst(root));
+System.out.println(BinaryTreeImpl.isBst2(root)); //using inOrder Traverse
 
-        //System.out.println(BinaryTreeImpl.largestBst(root).getSize());
+        System.out.println(BinaryTreeImpl.largestBst(root).getSize());
 
         TreeNode head=BinaryTreeImpl.convertBinartyToDLL(root);
 
