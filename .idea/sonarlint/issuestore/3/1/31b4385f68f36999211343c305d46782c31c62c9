@@ -1,0 +1,47 @@
+
+J
+java:S3740"/Provide the parametrized type for this generic.(œ£¯âúÿÿÿÿ
+J
+java:S3740"/Provide the parametrized type for this generic.(¦Îñûÿÿÿÿ
+J
+java:S3740"/Provide the parametrized type for this generic.(¦Îñûÿÿÿÿ
+J
+java:S3740"/Provide the parametrized type for this generic.(Ä£éºşÿÿÿÿ
+E
+java:S3740"/Provide the parametrized type for this generic.(²…¥
+J
+java:S3740"/Provide the parametrized type for this generic.(—Ôşùøÿÿÿÿ
+J
+java:S3740"/Provide the parametrized type for this generic.(„ò§øÿÿÿÿ
+J
+java:S37406"/Provide the parametrized type for this generic.(ä¡ß²üÿÿÿÿ
+J
+java:S37406"/Provide the parametrized type for this generic.(ä¡ß²üÿÿÿÿ
+J
+java:S3740="/Provide the parametrized type for this generic.(¾í×øÿÿÿÿ
+E
+java:S3740S"/Provide the parametrized type for this generic.(ŸÇ—­
+D
+java:S3740T"/Provide the parametrized type for this generic.(…Ø°;
+J
+java:S3740_"/Provide the parametrized type for this generic.(Ò«Áæûÿÿÿÿ
+J
+java:S3740g"/Provide the parametrized type for this generic.(ÄéÏÃûÿÿÿÿ
+J
+java:S3740g"/Provide the parametrized type for this generic.(ÄéÏÃûÿÿÿÿ
+N
+java:S1854"8Remove this useless assignment to local variable "head".(Çˆö
+K
+java:S1854
+"5Remove this useless assignment to local variable "k".(½òâ‡
+P	java:S125"<This block of commented-out lines of code should be removed.(ÿøë}
+<
+java:S1481
+"&Remove this unused "k" local variable.(½òâ‡
+V	java:S125"<This block of commented-out lines of code should be removed.(æı÷çûÿÿÿÿ
+P
+java:S11446"5Remove this unused private "rotateLinkedList" method.(ä¡ß²üÿÿÿÿ
+s	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²…¥
+b
+java:S2259"L"NullPointerException" will be thrown when invoking method "swapPairWise()".(Çˆö

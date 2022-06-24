@@ -1,0 +1,181 @@
+
+`	java:S112	"FDefine and throw a dedicated exception instead of using a generic one.( ÃÁ—ùÿÿÿÿ
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ô¾’÷
+\	java:S112–"FDefine and throw a dedicated exception instead of using a generic one.(¾¦÷û
+a	java:S112•"FDefine and throw a dedicated exception instead of using a generic one.(îïÎÖøÿÿÿÿ
+\	java:S112¨"FDefine and throw a dedicated exception instead of using a generic one.(¾¦÷û
+a	java:S112¦"FDefine and throw a dedicated exception instead of using a generic one.(Şµ¾äûÿÿÿÿ
+a	java:S112Ó"FDefine and throw a dedicated exception instead of using a generic one.(ˆ“ëÁüÿÿÿÿ
+\	java:S112Ğ"FDefine and throw a dedicated exception instead of using a generic one.(Ê€­Û
+J
+java:S3740"/Provide the parametrized type for this generic.(õâ’÷ûÿÿÿÿ
+J
+java:S3740"/Provide the parametrized type for this generic.(¿‘Ö‘üÿÿÿÿ
+E
+java:S3740"/Provide the parametrized type for this generic.(ô¾’÷
+E
+java:S3740
+"/Provide the parametrized type for this generic.(Òñâì
+J
+java:S3740"/Provide the parametrized type for this generic.(Ó¨‘üÿÿÿÿ
+E
+java:S3740"/Provide the parametrized type for this generic.(÷¿ãâ
+J
+java:S3740"/Provide the parametrized type for this generic.(˜Ü±üşÿÿÿÿ
+E
+java:S3740"/Provide the parametrized type for this generic.(éÀ¼˜
+E
+java:S3740&"/Provide the parametrized type for this generic.(­œ‚›
+E
+java:S37402"/Provide the parametrized type for this generic.(ÎÖ²Œ
+J
+java:S3740B"/Provide the parametrized type for this generic.(ßËëµşÿÿÿÿ
+J
+java:S3740K"/Provide the parametrized type for this generic.(—ÇÈöıÿÿÿÿ
+J
+java:S3740V"/Provide the parametrized type for this generic.(¢¬­øÿÿÿÿ
+J
+java:S3740a"/Provide the parametrized type for this generic.(€åˆşÿÿÿÿ
+E
+java:S3740q"/Provide the parametrized type for this generic.(¾˜ÒÆ
+J
+java:S3740{"/Provide the parametrized type for this generic.(Ÿïèúÿÿÿÿ
+J
+java:S3740{"/Provide the parametrized type for this generic.(Ÿïèúÿÿÿÿ
+J
+java:S3740}"/Provide the parametrized type for this generic.(½Ó©“ıÿÿÿÿ
+K
+java:S3740‹"/Provide the parametrized type for this generic.(¨Õ¹Òÿÿÿÿÿ
+K
+java:S3740•"/Provide the parametrized type for this generic.(îïÎÖøÿÿÿÿ
+K
+java:S3740—"/Provide the parametrized type for this generic.(²ıÑªşÿÿÿÿ
+K
+java:S3740œ"/Provide the parametrized type for this generic.(îÎ‹ÿÿÿÿÿ
+K
+java:S3740¦"/Provide the parametrized type for this generic.(Şµ¾äûÿÿÿÿ
+K
+java:S3740ª"/Provide the parametrized type for this generic.(²ıÑªşÿÿÿÿ
+K
+java:S3740¾"/Provide the parametrized type for this generic.(œÈä¾üÿÿÿÿ
+F
+java:S3740¿"/Provide the parametrized type for this generic.(ºù¿÷
+F
+java:S3740¿"/Provide the parametrized type for this generic.(ºù¿÷
+F
+java:S3740À"/Provide the parametrized type for this generic.(›ÓÓ
+F
+java:S3740À"/Provide the parametrized type for this generic.(›ÓÓ
+F
+java:S3740Ã"/Provide the parametrized type for this generic.(Ù§Éí
+F
+java:S3740×"/Provide the parametrized type for this generic.(—³ãÆ
+K
+java:S3740Ú"/Provide the parametrized type for this generic.(²ıÑªşÿÿÿÿ
+K
+java:S3740Û"/Provide the parametrized type for this generic.(êÖÆ¸ûÿÿÿÿ
+F
+java:S3740Ü"/Provide the parametrized type for this generic.(å¸¾
+F
+java:S3740ø"/Provide the parametrized type for this generic.(»“áŸ
+K
+java:S3740‰"/Provide the parametrized type for this generic.(Øëßüÿÿÿÿ
+E
+java:S3740"/Provide the parametrized type for this generic.(ş³Ì
+F
+java:S3740˜"/Provide the parametrized type for this generic.(õãÇ
+K
+java:S3740™"/Provide the parametrized type for this generic.(âŞÍ¥úÿÿÿÿ
+F
+java:S3740©"/Provide the parametrized type for this generic.(á•½
+F
+java:S3740©"/Provide the parametrized type for this generic.(á•½
+K
+java:S3740²"/Provide the parametrized type for this generic.(»ˆ•Óùÿÿÿÿ
+K
+java:S3740À"/Provide the parametrized type for this generic.(Ë”Œşúÿÿÿÿ
+F
+java:S3740Ğ"/Provide the parametrized type for this generic.(Ê€­Û
+F
+java:S3740Õ"/Provide the parametrized type for this generic.(Òñâì
+K
+java:S3740Ú"/Provide the parametrized type for this generic.(Ó¨‘üÿÿÿÿ
+E
+java:S3740ë"/Provide the parametrized type for this generic.(Íş×b
+F
+java:S3740‚"/Provide the parametrized type for this generic.(•‹¦
+F
+java:S3740"/Provide the parametrized type for this generic.(àÆ¿é
+K
+java:S3740–"/Provide the parametrized type for this generic.(Ì©Ù¼úÿÿÿÿ
+K
+java:S3740³"/Provide the parametrized type for this generic.(€¡Íåøÿÿÿÿ
+F
+java:S3740¹"/Provide the parametrized type for this generic.(¦öË°
+F
+java:S3740¹"/Provide the parametrized type for this generic.(¦öË°
+K
+java:S3740º"/Provide the parametrized type for this generic.(Ú±±€ùÿÿÿÿ
+K
+java:S3740Á"/Provide the parametrized type for this generic.(Ó¨‘üÿÿÿÿ
+K
+java:S3740Ñ"/Provide the parametrized type for this generic.(¿µ€…ûÿÿÿÿ
+F
+java:S3740Ò"/Provide the parametrized type for this generic.(ş‘Üõ
+F
+java:S3740Ò"/Provide the parametrized type for this generic.(ş‘Üõ
+K
+java:S3740ã"/Provide the parametrized type for this generic.(¶‰ íùÿÿÿÿ
+K
+java:S3740ä"/Provide the parametrized type for this generic.(õ›ê¤ÿÿÿÿÿ
+F
+java:S3740ó"/Provide the parametrized type for this generic.(¯ı¢ˆ
+K
+java:S3740ù"/Provide the parametrized type for this generic.(§ßŠùÿÿÿÿ
+K
+java:S3740…"/Provide the parametrized type for this generic.(“Ô¿€ûÿÿÿÿ
+F
+java:S3740”"/Provide the parametrized type for this generic.(œúé‚
+K
+java:S3740½"/Provide the parametrized type for this generic.( ”ê¥ıÿÿÿÿ
+F
+java:S3740¾"/Provide the parametrized type for this generic.(Ş¼ïù
+K
+java:S3740¿"/Provide the parametrized type for this generic.(ïâ°ßùÿÿÿÿ
+K
+java:S3740¿"/Provide the parametrized type for this generic.(ïâ°ßùÿÿÿÿ
+k
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(˜Ü±üşÿÿÿÿ
+f
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(éÀ¼˜
+l
+java:S1149—"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(²ıÑªşÿÿÿÿ
+l
+java:S1149ª"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(²ıÑªşÿÿÿÿ
+g
+java:S1149¿"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ºù¿÷
+g
+java:S1149À"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(›ÓÓ
+l
+java:S1149Ú"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(²ıÑªşÿÿÿÿ
+O
+java:S1118":Add a private constructor to hide the implicit public one.(şÂ·Y
+N	java:S106"9Replace this use of System.out or System.err by a logger.(÷ŸĞÊ
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(÷¿ãâ
+N	java:S106'"9Replace this use of System.out or System.err by a logger.(÷ŸĞÊ
+N	java:S1063"9Replace this use of System.out or System.err by a logger.(÷ŸĞÊ
+S	java:S106G"9Replace this use of System.out or System.err by a logger.(šÍÊíùÿÿÿÿ
+S	java:S106O"9Replace this use of System.out or System.err by a logger.(šÍÊíùÿÿÿÿ
+S	java:S106X"9Replace this use of System.out or System.err by a logger.(šÍÊíùÿÿÿÿ
+W	java:S125Î"<This block of commented-out lines of code should be removed.(Ù£êšûÿÿÿÿ
+O	java:S106İ"9Replace this use of System.out or System.err by a logger.(…™ı÷
+R	java:S125ø"<This block of commented-out lines of code should be removed.(ğêå
+N
+java:S1854«"7Remove this useless assignment to local variable "ans".(°ñĞ
+8
+java:S1116¨"Remove this empty statement.(Åñ­õşÿÿÿÿ
+T
+java:S1155à">Use isEmpty() to check whether the collection is empty or not.(›ãœ
+`
+java:S2259ã"DA "NullPointerException" could be thrown; "parent" is nullable here.(¶‰ íùÿÿÿÿ

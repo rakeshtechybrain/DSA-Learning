@@ -3,7 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DSA-Learnning.iml" filepath="$PROJECT_DIR$/.idea/DSA-Learnning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dsa-DPProgramming/Dsa-DPProgramming.iml" filepath="$PROJECT_DIR$/Dsa-DPProgramming/Dsa-DPProgramming.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-array/dsa-array.iml" filepath="$PROJECT_DIR$/dsa-array/dsa-array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dsa-binay-tree/dsa-binay-tree.iml" filepath="$PROJECT_DIR$/dsa-binay-tree/dsa-binay-tree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dsa-bst/dsa-bst.iml" filepath="$PROJECT_DIR$/dsa-bst/dsa-bst.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dsa-heap/dsa-heap.iml" filepath="$PROJECT_DIR$/dsa-heap/dsa-heap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dsa-linkedList/dsa-linkedList.iml" filepath="$PROJECT_DIR$/dsa-linkedList/dsa-linkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dsa-string/dsa-string.iml" filepath="$PROJECT_DIR$/dsa-string/dsa-string.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dsa-tree/dsa-tree.iml" filepath="$PROJECT_DIR$/dsa-tree/dsa-tree.iml" />
     </modules>
   </component>
 </project>

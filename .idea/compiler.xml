@@ -6,11 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="dsa-tree" />
+        <module name="dsa-bst" />
+        <module name="dsa-string" />
+        <module name="dsa-heap" />
+        <module name="Dsa-DPProgramming" />
         <module name="dsa-array" />
+        <module name="dsa-linkedList" />
+        <module name="dsa-binay-tree" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
       <module name="dsa-array" target="1.8" />
+      <module name="dsa-binay-tree" target="11" />
+      <module name="dsa-bst" target="1.8" />
+      <module name="Dsa-DPProgramming" target="1.8" />
+      <module name="dsa-heap" target="1.8" />
+      <module name="dsa-linkedList" target="11" />
+      <module name="dsa-string" target="1.8" />
+      <module name="dsa-tree" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

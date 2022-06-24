@@ -1,0 +1,13 @@
+
+P
+java:S1854":Remove this useless assignment to local variable "result".(Ùí‹ò
+A
+java:S1481"+Remove this unused "result" local variable.(Ùí‹ò
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(ÅÃ÷åúÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(‡þ·€þÿÿÿÿ
+M	java:S106"9Replace this use of System.out or System.err by a logger.(²¢¾
+N	java:S106("9Replace this use of System.out or System.err by a logger.(©ƒÚæ
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(«ŽÉæùÿÿÿÿ
+C
+java:S1168<"&Return an empty array instead of null.(¥¹ï8Øæâóï/

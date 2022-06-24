@@ -1,0 +1,5 @@
+
+…
+java:S4165"hRemove this useless assignment; "rightChild" already holds the assigned value along all execution paths.(¥‚8Ôû×ô/
+…
+java:S4165""hRemove this useless assignment; "rightChild" already holds the assigned value along all execution paths.(¥‚8Õû×ô/

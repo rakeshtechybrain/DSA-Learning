@@ -1,0 +1,11 @@
+
+N	java:S106
+"9Replace this use of System.out or System.err by a logger.(®¿€ˆ
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(¬‰ß–ÿÿÿÿÿ
+<
+java:S1659"!Declare "end" on a separate line.(‡´Ÿêÿÿÿÿÿ
+5
+java:S1659"Declare "r" on a separate line.(×š¤•
+4
+java:S1659*"Declare "r" on a separate line.(ƒá¡\

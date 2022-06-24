@@ -1,0 +1,20 @@
+
+L
+java:S3740,"/Provide the parametrized type for this generic.(´­Şı8Ä£ƒ’÷/
+L
+java:S3740,"/Provide the parametrized type for this generic.(´­Şı8Ä£ƒ’÷/
+
+java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(˜İâœÿÿÿÿÿ8Å£ƒ’÷/
+
+java:S1149*"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(˜İâœÿÿÿÿÿ8Å£ƒ’÷/
+m
+java:S1149,"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(´­Şı8Å£ƒ’÷/
+]	java:S125	"<This block of commented-out lines of code should be removed.(±Ô¿€ûÿÿÿÿ8Æ£ƒ’÷/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Òôø¿8Ç£ƒ’÷/
+X	java:S125B"<This block of commented-out lines of code should be removed.(¡¥ä8Ì£ƒ’÷/
+M
+java:S1128"1Remove this unused import 'java.util.LinkedList'.(»Äğ18Ì£ƒ’÷/
+M
+java:S1144)"0Remove this unused private "reverseWord" method.(ûÇÜƒ8Í£ƒ’÷/
+i
+java:S3973>"GUse indentation to denote the code conditionally executed by this "if".(çğ‹ÿÿÿÿÿ8Í£ƒ’÷/

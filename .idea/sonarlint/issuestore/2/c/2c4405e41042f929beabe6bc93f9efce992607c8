@@ -1,0 +1,24 @@
+
+E
+java:S3740	"/Provide the parametrized type for this generic.(Í…»é
+E
+java:S3740	"/Provide the parametrized type for this generic.(Í…»é
+D
+java:S3740H"/Provide the parametrized type for this generic.(×œÉ
+
+‡
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Þýÿÿÿÿ
+S	java:S106C"9Replace this use of System.out or System.err by a logger.(‘ä¬§úÿÿÿÿ
+P	java:S125"<This block of commented-out lines of code should be removed.(ñ…u
+Q	java:S125"<This block of commented-out lines of code should be removed.(¢þÈž
+Q	java:S125"<This block of commented-out lines of code should be removed.(˜¥¿Õ
+Q	java:S125 "<This block of commented-out lines of code should be removed.(·—Ô
+Q	java:S1252"<This block of commented-out lines of code should be removed.(°†Ý¾
+Q	java:S125<"<This block of commented-out lines of code should be removed.(‰Ë²í
+V	java:S125>"<This block of commented-out lines of code should be removed.(”‰Àïúÿÿÿÿ
+Q	java:S125@"<This block of commented-out lines of code should be removed.(ÀëÈü
+N	java:S106D"9Replace this use of System.out or System.err by a logger.(ÙÇ„È
+S	java:S106F"9Replace this use of System.out or System.err by a logger.(ê¾âöøÿÿÿÿ
+N	java:S106J"9Replace this use of System.out or System.err by a logger.(Š›ôù
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ

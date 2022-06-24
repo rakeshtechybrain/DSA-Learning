@@ -1,0 +1,15 @@
+
+Q
+java:S3740#"/Provide the parametrized type for this generic.(¶â¬Şùÿÿÿÿ8¤”Ñ÷/
+
+java:S1149$"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(…ÁÆøÿÿÿÿ8¦”Ñ÷/
+G
+java:S1197"*Move the array designators [] to the type.(ò‘–8«”Ñ÷/
+G
+java:S1197"*Move the array designators [] to the type.(œÖÅ”8«”Ñ÷/
+T	java:S106"9Replace this use of System.out or System.err by a logger.(œ™À8¬”Ñ÷/
+Z	java:S106/"9Replace this use of System.out or System.err by a logger.(Ê©•§üÿÿÿÿ8¯”Ñ÷/
+L
+java:S1144!"/Remove this unused private "removeDups" method.(úÑÆ»8°”Ñ÷/
+>
+java:S1643"Use a StringBuilder instead.(ÈìËËÿÿÿÿÿ8±”Ñ÷/
